@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Spanish Translation Ratings </title>
+
+    <script src= "https://unpkg.com/jspsych@7.3.0"></script>
+    <link href= "https://unpkg.com/jspsych@7.3.0/css/jspsych.css" rel="stylesheet" type="text/css"/>
+    <script src="https://unpkg.com/@jspsych/plugin-survey-likert@1.1.2"></script>
+    <script src= “sentences.js”></script>
+
+</head>
+<body>
+<script>
+
+const jsPsych = initJsPsych({
+    on_finish: function() {
+    jsPsych.data.displayData();
+    }
+    });
+
+    var trial = {
+    type: jsPsychSurveyLikert,
+     questions: [
+        {
+        prompt: jsPsych.timelineVariable('English'), 
+        labels: [
+            "Not at all accurate", 
+            "Somewhat inaccurate", 
+            "Neutral", 
+            "Somewhat accurate", 
+            "Very accurate"
+        ]
+     }
+    ]
+    };
+
+jsPsych.run([trial]);
+
+
+
+</script>
+</body>
+
+
+
+
+
+</html>
