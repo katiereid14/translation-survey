@@ -7,7 +7,7 @@
     <link href= "https://unpkg.com/jspsych@7.3.0/css/jspsych.css" rel= "stylesheet" type= "text/css"/>
     <script src="https://unpkg.com/@jspsych/plugin-survey-likert@1.1.2"></script>
     
-    <script src= "sentences.js"></script>
+    <script src= "translations.js"></script>
 
 </head>
 <body>
@@ -23,7 +23,7 @@ const jsPsych = initJsPsych({
     type: jsPsychSurveyLikert,
      questions: [
         {
-        prompt: jsPsych.timelineVariable('English'), 
+        prompt: jsPsych.timelineVariable('sentences'), 
         labels: [
             "Not at all accurate", 
             "Somewhat inaccurate", 
@@ -37,12 +37,10 @@ const jsPsych = initJsPsych({
 
     var procedure = {
         timeline:[trial],
-        timeline_variables: sentences,
+        timeline_variables: translations,
         randomize_order: true
 
-
     }
-
 
 jsPsych.run([procedure]);
 
