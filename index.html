@@ -17,9 +17,15 @@
 const jsPsych = initJsPsych({
     });
 
+    var subject_id = Math.floor(Math.random()*100000);
+
     var instructions = {
     type: jsPsychHtmlKeyboardResponse,
     stimulus: 'Thank you for helping us with our Psych experiment! You will be shown a series of sentences in English and Spanish. Please rate the accuracy of our translations! Thank you :) <br> <br> Press any key to continue </br>',
+    data: {
+    typeoftrial: 'instructions',
+    subject: subject_id
+    }
 }
 
     var trial = {
@@ -32,11 +38,13 @@ const jsPsych = initJsPsych({
             "Somewhat inaccurate", 
             "Neutral", 
             "Somewhat accurate", 
-            "Very accurate"
-        ]
-     }
-    ]
-    };
+            "Very accurate"],
+            data: {
+                typeoftrial: 'trial',
+                subject: subject_id}
+    }]
+        
+};
 
     var procedure = {
         timeline:[trial],
