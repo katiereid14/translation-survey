@@ -7,7 +7,8 @@
     <link href= "https://unpkg.com/jspsych@7.3.0/css/jspsych.css" rel= "stylesheet" type= "text/css"/>
     <script src= "https://unpkg.com/@jspsych/plugin-html-keyboard-response@1.1.1"></script>
     <script src="https://unpkg.com/@jspsych/plugin-survey-likert@1.1.2"></script>
-    
+    <script src="https://unpkg.com/@jspsych/plugin-survey-text@1.1.2"></script>
+
     <script src= "translations.js"></script>
 
 </head>
@@ -27,12 +28,13 @@ const jsPsych = initJsPsych({
     subject: subject_id
     }
 }
-
+/*
     var trial = {
     type: jsPsychSurveyLikert,
      questions: [
         {
         prompt: jsPsych.timelineVariable('sentences'), 
+        required: true,
         labels: [
             "Not at all accurate", 
             "Somewhat inaccurate", 
@@ -40,14 +42,34 @@ const jsPsych = initJsPsych({
             "Somewhat accurate", 
             "Very accurate"],
             data: {
+                sentence_num: 'sentence_number',
+                sentence_pair: 'sentences',
                 typeoftrial: 'trial',
                 subject: subject_id}
     }]
         
 };
-
+*/
+    var low_rating = {
+    type: jsPsychSurveyText,
+        questions: [
+        {prompt: '<p>You indicated that the translation was either "Somewhat innaccurate" or "Not at all accurate." <p> <p>Please provide Spanish translation of your own or a reason why the translation is innaccurate<p>'},
+  ]
+}
+/*
+    var not_english_loop = {
+        timeline: [not_english],
+        conditional_function: function() {
+        var dat = jsPsych.data.getLastTrialData().values()[0];
+        var answer = JSON.stringify(dat.response.English);
+        answer = answer.replace(/\W/g, '')
+        if(answer.localeCompare("No") == 0) {return true;} 
+        else {return false;}
+        }
+        }
+*/
     var procedure = {
-        timeline:[trial],
+        timeline:[low_rating],
         timeline_variables: translations,
         randomize_order: true
 
@@ -58,7 +80,7 @@ const jsPsych = initJsPsych({
     stimulus: 'You finished it! Thanks for your help. Press any key to end.',
 }
 
-jsPsych.run([instructions, procedure, end_experiment]);
+jsPsych.run([low_rating]);
 
 
 
