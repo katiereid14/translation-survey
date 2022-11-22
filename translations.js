@@ -73,7 +73,7 @@ var translations = [
   },
   {
     "sentence_number": 19,
-    "sentences": "You drop a bowling ball on a ceramic plate <br> T&uacute tiras una bola de boliche plato de cer&aacutemica"
+    "sentences": "You drop a bowling ball on a ceramic plate <br> T&uacute tiras una bola de boliche a un plato de cer&aacutemica"
   },
   {
     "sentence_number": 20,
