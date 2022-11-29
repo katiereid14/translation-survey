@@ -1,0 +1,61 @@
+---
+title: "R Notebook"
+output: html_notebook
+---
+# Install Packages
+```{r}
+#install.packages("tidyverse", dependencies = TRUE)
+#install.packages("ggthemes", dependencies = TRUE)
+#install.packages("datarium")
+#install.packages("emmeans")
+```
+
+# Load Packages
+```{r}
+library(tidyverse)
+library(ggplot2)
+library(ggthemes)
+library(rstatix)
+library(ggpubr)
+library(datarium)
+library(emmeans)
+```
+# Import Data
+```{r}
+preview_data = read_csv("katiedata.csv")
+preview_data2 = read_csv("katiedata2.csv")
+```
+# Bind Data
+```{r}
+data1 = preview_data %>%
+  select(stimulus, typeoftrial, subject, sentence_num, rating)
+
+data2 = preview_data2 %>%
+  select(stimulus, typeoftrial, subject, sentence_num, rating)
+
+final_data = rbind(data1, data2)
+```
+
+# Data Exclusion
+```{r}
+final_data = final_data %>%
+  filter(typeoftrial == "trial")
+```
+
+# Calculate Means
+```{r}
+subject_means = final_data %>%
+  group_by(subject) %>%
+  summarise(mean = mean(rating))
+```
+
+# T-Test
+```{r}
+t.test(subject_means$mean, mu = 4)
+```
+
+# Plot
+```{r}
+
+```
+
