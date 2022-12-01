@@ -1,0 +1,40 @@
+---
+title: "R Notebook"
+output: html_notebook
+editor_options: 
+  chunk_output_type: inline
+---
+
+
+```{r}
+library(tidyverse)
+d = read_csv("abc.csv")
+demo = d %>% filter(typeoftrial %in% c("demo", "english") & response != "0") %>%
+  separate(response, into = c("demo1", "demo2", "demo3", "demo4"), sep = ":")
+
+
+age = demo %>% filter(demo1 == "{\"Age\"") %>% select(demo2) %>%
+  mutate(age = as.numeric(gsub("[^[:digit:] ]", "", demo2)))
+
+age %>% summarise(mean_age = mean(age))
+
+race = demo %>% filter(demo1 == "{\"Race\"") %>% select(demo2)
+
+race %>% group_by(demo2) %>% count()
+
+gender_education = demo %>% filter(demo1 == "{\"Age\"") %>% select(demo3) %>%
+  separate(demo3, into = c("gender", "education"), sep = ",")  %>%
+  mutate(gender = tolower(gender),
+         gender = gsub("[[:space:]]", "", gender))
+
+gender_education %>% group_by(gender) %>%
+  count()
+
+gender_education %>% group_by(education) %>%
+  count()
+
+first_lang = demo %>% filter(demo1 == "{\"English\"") %>% select(demo2)
+first_lang %>% group_by(demo2) %>% count()
+  
+```
+

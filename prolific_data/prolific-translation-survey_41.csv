@@ -1,0 +1,18 @@
+"rt","stimulus","response","typeoftrial","subject","trial_type","trial_index","time_elapsed","internal_node_id","run_id","condition","recorded_at","source_code_version","ip","user_agent","device","browser","browser_version","platform","platform_version","question_order","practice_rating"
+"39628","
+        <p style=""font-size:20px;""> Welcome! Thank you for your interest in our study. </p>
+        <p style=""font-size:20px;""> This study is being conducted by researchers at Bowdoin College.</p>
+        <p style=""font-size:20px;""> In this experiment, you will be asked to rate the accuracy of English and Spanish translations.</p>
+        <p style=""font-size:20px;""> The entire experiment should not last more than 20 minutes. You will be paid $3 USD for your participation. </p>
+        <p style=""font-size:20px;""> Please click <a href = ""https://drive.google.com/file/d/1L92a02eEKCpaAEipmqDcBCDR7rsarqFE/view?usp=sharing"" target = ""_blank"">here</a> to read the full consent form. </p>
+        <p style=""font-size:20px;""> If you agree to participate, please click the button below to continue to experiment instructions.</p>
+        ","0","consent","45618","html-button-response","0","39629","0.0-0.0","41","1","2022-11-29 21:25:05","2df368f4e41f066fd1c82c297b4a1108","187.208.120.130","Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36","WebKit","Chrome","107.0.0.0","Windows","10.0","",""
+"8544","","{""ID"":""614dd5f6c07191a861f2bd78""}","ID","45618","survey-text","1","48168","0.0-1.0","41","1","2022-11-29 21:25:05","2df368f4e41f066fd1c82c297b4a1108","187.208.120.130","Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36","WebKit","Chrome","107.0.0.0","Windows","10.0","",""
+"320551","
+        <p style=""font-size:20px;""> You are about to begin the practice test. </p>
+        <p style=""font-size:20px;""> On each trial, you will see a sentence in English and its corresponding Spanish translation. </p>
+        <p style=""font-size:20px;""> You will rate the accuracy of the translation on a scale from ""Not at all accurate"" to ""Very accurate."" </p>
+        <p style=""font-size:20px;""> If you rate the translation as ""Somewhat innaccurate"" or ""Not at all accurate,"" you will be asked to provide your own translation or a reason why the translation is inaccurate. </p>
+        <p style=""font-size:20px;""> Click the button below to continue to the practice session.</p>","0","instructions","45618","html-button-response","2","368730","0.0-2.0","41","1","2022-11-29 21:25:05","2df368f4e41f066fd1c82c297b4a1108","187.208.120.130","Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36","WebKit","Chrome","107.0.0.0","Windows","10.0","",""
+"12102","You see how a duck is playing with a pumpkin <br> T&uacute ves como un pato est&aacute jugando con una calabaza","{""Q0"":3}","practice","45618","survey-likert","3","380836","0.0-3.0-0.0","41","1","2022-11-29 21:25:05","2df368f4e41f066fd1c82c297b4a1108","187.208.120.130","Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36","WebKit","Chrome","107.0.0.0","Windows","10.0","[0]","3"
+"34996","You see how a tiger is playing with a goose <br> T&uacute ves como un le&oacuten come una pizza","{""Q0"":0}","practice","45618","survey-likert","4","415841","0.0-3.0-0.1","41","1","2022-11-29 21:25:05","2df368f4e41f066fd1c82c297b4a1108","187.208.120.130","Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/107.0.0.0 Safari/537.36","WebKit","Chrome","107.0.0.0","Windows","10.0","[0]","0"
